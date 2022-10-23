@@ -1,6 +1,6 @@
-package org.Example.Cotizacion.Model;
+package org.example.Cotizacion.Model;
 
-import org.Example.Empresa.Model.Empresa;
+import org.example.Empresa.Model.Empresa;
 
 import java.time.LocalDate;
 

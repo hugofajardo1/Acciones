@@ -1,6 +1,6 @@
-package org.Example.CotizacionTest.UnitTest;
+package org.ExampleTest.CotizacionTest.UnitTest;
 
-import org.Example.Cotizacion.Model.Cotizacion;
+import org.example.Cotizacion.Model.Cotizacion;
 import org.example.Cotizacion.Exceptions.CotizacionException;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package org.Example.Empresa.Model;
+package org.example.Empresa.Model;
 
 public class Empresa {
     private Integer id;
