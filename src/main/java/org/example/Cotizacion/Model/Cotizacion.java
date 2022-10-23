@@ -9,4 +9,13 @@ public class Cotizacion {
     private Empresa empresa;
     private LocalDate fecha;
 
+    private Cotizacion(Integer id, Empresa empresa, LocalDate fecha) {
+        this.id = id;
+        this.empresa = empresa;
+        this.fecha = fecha;
+    }
+
+    public static Cotizacion factoryCotizacion(Integer id, Empresa empresa, LocalDate fecha) {
+        return new Cotizacion(id, empresa, fecha);
+    }
 }
