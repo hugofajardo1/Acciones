@@ -1,4 +1,4 @@
-package org.ExampleTest.CotizacionTest.UseCase;
+package org.ExampleTest.CotizacionTest.UseCaseTest;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 
