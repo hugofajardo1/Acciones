@@ -1,6 +1,6 @@
 package org.example.Empresa.Model;
 
-import org.example.Empresa.Exceptions.EmpresaAtributoNuloException;
+import org.example.Empresa.Exceptions.EmpresaException;
 
 public class Empresa {
     private Integer id;
@@ -11,17 +11,21 @@ public class Empresa {
         this.nombre = nombre;
     }
 
-    public static Empresa factoryEmpresa(Integer id, String nombre) throws EmpresaAtributoNuloException {
-        notNull(nombre, "El nombre no puede ser nulo");
+    public static Empresa factoryEmpresa(Integer id, String nombre) throws EmpresaException {
+        notEmpty(nombre, "El nombre no puede ser nulo");
         return new Empresa(id, nombre);
     }
 
-    private static void notNull(Object object, String descripcion) throws EmpresaAtributoNuloException {
+    private static void notNull(Object object, String descripcion) throws EmpresaException {
         if(object == null)
-            throw new EmpresaAtributoNuloException(descripcion);
+            throw new EmpresaException(descripcion);
     }
-    private static void notEmpty(String valor, String descripcion) throws EmpresaAtributoNuloException {
+    private static void notEmpty(String valor, String descripcion) throws EmpresaException {
         if (valor.isEmpty())
-            throw new EmpresaAtributoNuloException(descripcion);
+            throw new EmpresaException(descripcion);
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }

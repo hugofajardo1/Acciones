@@ -16,6 +16,6 @@ public class EmpresaUnitTest {
     }
     @Test
     void instanciarEmpresa_EmpresaIncompleta_InstanciaNoCorrecta() {
-        Assertions.assertThrows(EmpresaAtributoNuloException.class,()-> Empresa.factoryEmpresa(1, null));
+        Assertions.assertThrows(EmpresaException.class,()-> Empresa.factoryEmpresa(1, ""));
     }
 }

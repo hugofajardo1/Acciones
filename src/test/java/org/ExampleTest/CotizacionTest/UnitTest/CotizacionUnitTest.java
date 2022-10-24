@@ -4,6 +4,7 @@ import org.example.Cotizacion.Exceptions.CotizacionAtributoNuloException;
 import org.example.Cotizacion.Model.Cotizacion;
 import org.example.Cotizacion.Exceptions.CotizacionException;
 import org.example.Empresa.Exceptions.EmpresaAtributoNuloException;
+import org.example.Empresa.Exceptions.EmpresaException;
 import org.example.Empresa.Model.Empresa;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CotizacionUnitTest {
     @Test
-    void instanciarCotizacion_CotizacionCompleta_InstanciaCorrecta() throws CotizacionException, EmpresaAtributoNuloException {
+    void instanciarCotizacion_CotizacionCompleta_InstanciaCorrecta() throws CotizacionException, EmpresaException {
         Empresa empresa = Empresa.factoryEmpresa(1, "YPF");
         Cotizacion cotizacion = Cotizacion.factoryCotizacion(1, empresa, LocalDate.now());
         assertNotNull(cotizacion);
