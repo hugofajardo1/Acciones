@@ -5,11 +5,10 @@ import org.example.Accion.Exceptions.AccionException;
 import java.time.LocalDate;
 
 public class Accion {
-    private Integer id;
-    private LocalDate fecha;
-    private Double precio;
-
-    private Integer cantidad;
+    private final Integer id;
+    private final LocalDate fecha;
+    private final Double precio;
+    private final Integer cantidad;
 
     private Accion(Integer id, LocalDate fecha, Double precio, Integer cantidad) {
         this.id = id;
