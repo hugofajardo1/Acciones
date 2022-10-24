@@ -1,4 +1,4 @@
-package org.ExampleTest.Accion.UnitTest;
+package org.ExampleTest.AccionTest.UnitTest;
 
 import org.example.Accion.Exceptions.AccionException;
 import org.example.Accion.Model.Accion;
