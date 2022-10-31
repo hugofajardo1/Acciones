@@ -45,4 +45,7 @@ public class Agente {
     public void EliminarEstrategia(IEstrategia estrategia){
         this.estrategias.remove(estrategia);
     }
+    public void Evaluar(){
+        this.estrategias.forEach((estrategia) -> estrategia.evaluar(this));
+    }
 }
