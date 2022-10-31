@@ -4,7 +4,6 @@ import org.example.Cotizacion.Exceptions.CotizacionException;
 import org.example.Cotizacion.Model.Cotizacion;
 import org.example.Cotizacion.Repository.ICrearCotizacionRepository;
 import org.example.Cotizacion.UseCase.CrearCotizacionUseCase;
-import org.example.Empresa.Exceptions.EmpresaAtributoNuloException;
 import org.example.Empresa.Exceptions.EmpresaException;
 import org.example.Empresa.Model.Empresa;
 import org.junit.jupiter.api.Assertions;
@@ -23,7 +22,7 @@ public class CotizacionCrearUseCaseTest {
     @Test
     public void crearCotizacion_CotizacionNoExiste_GuardaCorrectamente () throws CotizacionException, EmpresaException {
         Empresa empresa = Empresa.factoryEmpresa(1, "YPF");
-        Cotizacion cotizacion = Cotizacion.factoryCotizacion(1, empresa, LocalDate.now());
+        Cotizacion cotizacion = Cotizacion.factoryCotizacion(1, empresa, LocalDate.now(), 290.0);
         when(crearCotizacionRepository.guardar(cotizacion)).thenReturn(true);
         CrearCotizacionUseCase crearCotizacionUseCase = new CrearCotizacionUseCase(crearCotizacionRepository);
         boolean resultado = crearCotizacionUseCase.crearCotizacion(cotizacion);
