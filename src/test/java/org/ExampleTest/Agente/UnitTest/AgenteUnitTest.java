@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class AgenteUnitTest {
     @Test
     void instanciarAgente_AgenteCompleta_InstanciaCorrecta() throws AgenteException {
-        Agente empresa = Agente.factoryAgente(1, "YPF");
+        Agente empresa = Agente.factoryAgente(1, "Hugo Fajardo", 0.0);
         assertNotNull(empresa);
     }
     @Test
     void instanciarAgente_AgenteIncompleta_InstanciaNoCorrecta() {
-        Assertions.assertThrows(AgenteException.class,()-> Agente.factoryAgente(1, ""));
+        Assertions.assertThrows(AgenteException.class,()-> Agente.factoryAgente(1, "", 0.0));
     }
 }

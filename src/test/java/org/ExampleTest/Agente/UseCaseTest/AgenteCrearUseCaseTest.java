@@ -22,7 +22,7 @@ public class AgenteCrearUseCaseTest {
 
     @Test
     public void crearAgente_AgenteNoExiste_GuardaCorrectamente () throws AgenteException {
-        Agente agente = Agente.factoryAgente(1, "YPF");
+        Agente agente = Agente.factoryAgente(1, "Hugo Fajardo", 0.0);
         when(crearAgenteRepository.guardar(agente)).thenReturn(true);
         CrearAgenteUseCase crearAgenteUseCase = new CrearAgenteUseCase(crearAgenteRepository, verificarAgenteRepository);
         boolean resultado = crearAgenteUseCase.crearAgente(agente);
@@ -31,7 +31,7 @@ public class AgenteCrearUseCaseTest {
 
     @Test
     public void crearAgente_AgenteExiste_NoGuarda () throws AgenteException {
-        Agente empresa = Agente.factoryAgente(1, "YPF");
+        Agente empresa = Agente.factoryAgente(1, "Hugo Fajardo", 0.0);
         when(verificarAgenteRepository.existeAgente(empresa.getNombre())).thenReturn(true);
         when(crearAgenteRepository.guardar(empresa)).thenReturn(true);
         CrearAgenteUseCase crearAgenteUseCase = new CrearAgenteUseCase(crearAgenteRepository, verificarAgenteRepository);
