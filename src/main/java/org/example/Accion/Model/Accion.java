@@ -12,6 +12,10 @@ public class Accion {
     private final Double precio;
     private final Integer cantidad;
 
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
     private Accion(Integer id, Empresa empresa, LocalDate fecha, Double precio, Integer cantidad) {
         this.id = id;
         this.empresa = empresa;
